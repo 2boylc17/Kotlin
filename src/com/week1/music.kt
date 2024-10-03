@@ -1,3 +1,5 @@
+package com.week1
+
 fun main () {
     val artists = arrayOf("a","b","c")
     println("Guess the artists")

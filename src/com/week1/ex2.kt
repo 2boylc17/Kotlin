@@ -1,3 +1,5 @@
+package com.week1
+
 fun main () {
     println("What is your name?")
     val n = readlnOrNull()
