@@ -7,12 +7,17 @@ class Cat (nameIn: String, ageIn: Int, weightIn: Int) {
     private var age: Int = ageIn
     private var weight: Int = weightIn
 
-    fun walk() {
-        weight--
+    fun walk(distance: Int) : Boolean
+    {
+        if(weight - distance >= 5) {
+            weight -= distance
+            return true
+        }
+        return false
     }
 
-    fun eat() {
-        weight ++
+    fun eat(amount: Int) {
+        weight += amount
     }
 
 
