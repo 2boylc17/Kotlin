@@ -1,8 +1,8 @@
 package com.student
 
 abstract class Student (idIn: String, nameIn: String, courseIn: String, markIn: Double) {
-    private val id: String = idIn
-    private val name: String = nameIn
+    val id: String = idIn
+    val name: String = nameIn
     private val course: String = courseIn
     var mark: Double = 0.00
         set(newMark) {
@@ -22,6 +22,10 @@ abstract class Student (idIn: String, nameIn: String, courseIn: String, markIn: 
         } else {
             false
         }
+    }
+
+    override fun toString(): String {
+        return "$name is a student, they are on course $course and their mark is $mark"
     }
 
 }
