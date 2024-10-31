@@ -3,7 +3,7 @@ import com.student.Student
 import com.student.Undergraduate
 import com.student.Masters
 
-class University(val name: String) {
+class University {
     private val students = mutableListOf<Student>()
 
     fun enrolStudent(s: Student) {
@@ -19,14 +19,20 @@ class University(val name: String) {
         return null
     }
 
-    fun findStudentsByName(search: String): MutableList<Student> {
+    fun findStudentsByCourse(search: String): MutableList<Student> {
         val nameList = mutableListOf<Student>()
         for (s in students) {
-            if (s.name == search) {
+            if (s.course == search) {
                 nameList.add(s)
             }
         }
         return nameList
+    }
+
+    fun passingStudents() : List<Student> {
+
+        val passList = students.filter { it.mark >= 40 }
+        return passList
     }
 
 }

@@ -3,7 +3,7 @@ package com.student
 abstract class Student (idIn: String, nameIn: String, courseIn: String, markIn: Double) {
     val id: String = idIn
     val name: String = nameIn
-    private val course: String = courseIn
+    val course: String = courseIn
     var mark: Double = 0.00
         set(newMark) {
             if (newMark <= 100 || newMark >= 0) {
